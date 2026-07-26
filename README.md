@@ -27,8 +27,9 @@
 | S.No | Team Member |
 |:---:|-------------|
 | 1 | Vignesh V S |
-| 2 | Member 2 |
-| 3 | Member 3 |
+| 2 | Praneeth J|
+| 3 | R Pranav Adhith |
+| 4 | Ramshray R B |
 
 ---
 
