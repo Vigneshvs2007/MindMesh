@@ -47,32 +47,37 @@ By combining retrieval, reasoning, verification, and academic writing into a uni
 ## 🔄 ScholarPilot Research Lifecycle
 
 ```mermaid
-flowchart LR
+flowchart TB
 
-A["🎯 Research Topic"] --> B["🔍 Prior Work"]
-B --> C["📚 Paper Search"]
-C --> D["📄 Claim Extraction"]
-D --> E["🧠 Literature Synthesis"]
+subgraph R1[" "]
+direction LR
+A["🎯 Research Topic"] --> B["🔍 Prior Work"] --> C["📚 Paper Search"] --> D["📄 Claim Extraction"]
+end
 
-E --> F["💡 Gap Finder"]
-F --> G["⚔️ Adversarial Review"]
-G -->|PASS| H["📈 Resilience Score"]
-G -->|Retry| F
+D --> E
 
-H --> I["📖 Citation Management"]
-I --> J["✍️ Writing Assistant"]
-J --> K["✅ Verification"]
-K --> L["🧠 Memory"]
+subgraph R2[" "]
+direction RL
+H["📈 Resilience"] --> G["⚔️ Adversarial Review"] --> F["💡 Gap Finder"] --> E["🧠 Synthesis"]
+end
 
-L --> M["🌍 Cross-Domain Analogy"]
-M --> N["⚙️ Tech Parameters"]
-N --> O["📄 Overleaf Drafting"]
-O --> P["🎉 Publication Ready"]
+H --> I
 
-%% Snake connectors
-E -.-> I
-L -.-> A
+subgraph R3[" "]
+direction LR
+I["📖 Citations"] --> J["✍️ Writing"] --> K["✅ Verification"] --> L["🧠 Memory"]
+end
+
+L --> M
+
+subgraph R4[" "]
+direction RL
+P["🎉 Publication"] --> O["📄 Overleaf"] --> N["⚙️ Tech Params"] --> M["🌍 Cross-Domain"]
+end
+
+G -. Retry .-> F
 ```
+
 ---
 ## 📜 License
 
