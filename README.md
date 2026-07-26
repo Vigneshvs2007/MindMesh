@@ -47,30 +47,33 @@ By combining retrieval, reasoning, verification, and academic writing into a uni
 ## 🔄 ScholarPilot Research Lifecycle
 
 ```mermaid
-flowchart TD
-    A["🎯 Research Topic"] --> B["🔍 Phase 0<br/>Prior Work Discovery"]
-    B --> C["📚 Phase 1<br/>Paper Search & Relevance Scoring"]
-    C --> D["📄 Phase 2<br/>Paper Extraction & Claim Mining"]
-    D --> E["🧠 Phase 3<br/>Synthesis & Clustering"]
-    E --> F["💡 Phase 4<br/>Gap Finding & Novelty Assessment"]
+flowchart LR
 
-    F --> G["⚔️ Phase 5<br/>Adversarial Review"]
+A["🎯 Research Topic"] --> B["🔍 Prior Work"]
+B --> C["📚 Paper Search"]
+C --> D["📄 Claim Extraction"]
+D --> E["🧠 Literature Synthesis"]
 
-    G -->|PASS| H["📈 Phase 6<br/>Verdict & Resilience Score"]
-    G -->|OBJECTION| F
+E --> F["💡 Gap Finder"]
+F --> G["⚔️ Adversarial Review"]
+G -->|PASS| H["📈 Resilience Score"]
+G -->|Retry| F
 
-    H --> I["🌍 Phase 7<br/>Cross-Domain Analogies"]
-    I --> J["⚙️ Phase 8<br/>Technical Parameter Extraction"]
+H --> I["📖 Citation Management"]
+I --> J["✍️ Writing Assistant"]
+J --> K["✅ Verification"]
+K --> L["🧠 Memory"]
 
-    J --> K["📖 Phase 9<br/>Citation Management"]
-    K --> L["✍️ Phase 10<br/>Writing Assistance"]
-    L --> M["✅ Phase 11<br/>Verification Engine"]
-    M --> N["🧠 Phase 12<br/>Memory Persistence"]
-    N --> O["📄 Phase 13<br/>Overleaf Paper Generation"]
+L --> M["🌍 Cross-Domain Analogy"]
+M --> N["⚙️ Tech Parameters"]
+N --> O["📄 Overleaf Drafting"]
+O --> P["🎉 Publication Ready"]
 
-    O --> P["🎉 Publication-Ready Research"]
+%% Snake connectors
+E -.-> I
+L -.-> A
 ```
-
+---
 ## 📜 License
 
 This project is licensed under the **MIT License**.
