@@ -49,35 +49,24 @@ By combining retrieval, reasoning, verification, and academic writing into a uni
 ```mermaid
 flowchart TB
 
-subgraph R1[" "]
-direction LR
-A["🎯 Research Topic"] --> B["🔍 Prior Work"] --> C["📚 Paper Search"] --> D["📄 Claim Extraction"]
-end
+A["🎯 Research Topic"]
+--> B["🔍 Prior Work"]
+--> C["📚 Search & Score Papers"]
+--> D["📄 Extract Claims"]
+--> E["🧠 Synthesize Literature"]
+--> F["💡 Discover Research Gap"]
 
-D --> E
+F --> G["⚔️ Adversarial Review"]
 
-subgraph R2[" "]
-direction RL
-H["📈 Resilience"] --> G["⚔️ Adversarial Review"] --> F["💡 Gap Finder"] --> E["🧠 Synthesis"]
-end
+G -->|PASS| H["📈 Resilience Score"]
+G -->|Retry| F
 
-H --> I
-
-subgraph R3[" "]
-direction LR
-I["📖 Citations"] --> J["✍️ Writing"] --> K["✅ Verification"] --> L["🧠 Memory"]
-end
-
-L --> M
-
-subgraph R4[" "]
-direction RL
-P["🎉 Publication"] --> O["📄 Overleaf"] --> N["⚙️ Tech Params"] --> M["🌍 Cross-Domain"]
-end
-
-G -. Retry .-> F
+H --> I["📖 Citations & Writing"]
+I --> J["✅ Verification & Memory"]
+J --> K["🌍 Cross-Domain & Tech Params"]
+K --> L["📄 Overleaf Drafting"]
+L --> M["🎉 Publication"]
 ```
-
 ---
 ## 📜 License
 
@@ -85,4 +74,4 @@ This project is licensed under the **MIT License**.
 
 See the **[LICENSE](LICENSE)** file for complete license details.
 
-Copyright © 2026 **Team MindMesh**.
+Copyright © 2026 **MindMesh**.
