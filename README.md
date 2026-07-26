@@ -44,6 +44,32 @@ Unlike conventional research assistants that primarily search and summarize pape
 By combining retrieval, reasoning, verification, and academic writing into a unified workflow, ScholarPilot helps researchers move from an initial idea to a publication-ready manuscript with confidence.
 
 ---
+## 🔄 ScholarPilot Research Lifecycle
+
+```mermaid
+flowchart TD
+    A["🎯 Research Topic"] --> B["🔍 Phase 0<br/>Prior Work Discovery"]
+    B --> C["📚 Phase 1<br/>Paper Search & Relevance Scoring"]
+    C --> D["📄 Phase 2<br/>Paper Extraction & Claim Mining"]
+    D --> E["🧠 Phase 3<br/>Synthesis & Clustering"]
+    E --> F["💡 Phase 4<br/>Gap Finding & Novelty Assessment"]
+
+    F --> G["⚔️ Phase 5<br/>Adversarial Review"]
+
+    G -->|PASS| H["📈 Phase 6<br/>Verdict & Resilience Score"]
+    G -->|OBJECTION| F
+
+    H --> I["🌍 Phase 7<br/>Cross-Domain Analogies"]
+    I --> J["⚙️ Phase 8<br/>Technical Parameter Extraction"]
+
+    J --> K["📖 Phase 9<br/>Citation Management"]
+    K --> L["✍️ Phase 10<br/>Writing Assistance"]
+    L --> M["✅ Phase 11<br/>Verification Engine"]
+    M --> N["🧠 Phase 12<br/>Memory Persistence"]
+    N --> O["📄 Phase 13<br/>Overleaf Paper Generation"]
+
+    O --> P["🎉 Publication-Ready Research"]
+```
 
 ## 📜 License
 
